@@ -2,13 +2,11 @@
 <suite  name="NopCommerce">
 
 
-  <test name="Run On FireFox">
-  
+<test name="Run On Firefox">
     <classes>
-      <class name="com.nopcommerce.user.User_01_Register_Login"/>
+      <class name="com.nopcommerce.user.lever_03_Page_Object"/>
     </classes>
-    
   </test> 
- 
+ 	
   
 </suite> 
