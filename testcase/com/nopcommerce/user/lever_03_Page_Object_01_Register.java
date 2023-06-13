@@ -14,7 +14,7 @@ import commons.BasePage;
 import pageObject.HomePageObject;
 import pageObject.RegisterPageObject;
 
-public class lever_03_Page_Object {
+public class lever_03_Page_Object_01_Register {
 	  private WebDriver driver;
 	  private String projectPath = System.getProperty("user.dir");
 	  private String firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;
