@@ -2,7 +2,14 @@
 <suite  name="NopCommerce">
 
 
-	 <test name="Run On Firefox">
+	<test name="Run On Firefox">
+	<parameter name = "browser" value = "firefox"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_06_Page_Generator_Manager_3"/>
+    </classes>
+  	</test> 
+  	
+	<!--  <test name="Run On Firefox">
 	<parameter name = "browser" value = "firefox"/>
     <classes>
       <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
@@ -43,6 +50,6 @@
     <classes>
       <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
     </classes>
-  	</test> 
+  	</test> -->
   
 </suite> 

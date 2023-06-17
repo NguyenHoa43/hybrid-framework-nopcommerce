@@ -11,9 +11,10 @@ public class HomePageObject extends BasePage {
 	public HomePageObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	public void clickToRegisterLink() {
+	public RegisterPageObject clickToRegisterLink() {
 		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
+		return PageGeneratorManager.getRegisterPage(driver);
 	}
 	public boolean isMyAccountLinkDisplay() {
 		waitForElementVisible(driver, HomePageUI.MYACCOUNT_LINK);

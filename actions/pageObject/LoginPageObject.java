@@ -11,9 +11,10 @@ public class LoginPageObject extends BasePage {
 	public LoginPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.BUTTON_LOGIN);
 		clickToElement(driver, LoginPageUI.BUTTON_LOGIN);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 	
 	public void inputToEmailTextbox(String email) {
@@ -32,7 +33,7 @@ public class LoginPageObject extends BasePage {
 	}
 	
 	public String getErrorMessageAtEmailTextbox() {
-		waitAllElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+		waitForElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
 		return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
 	}
 	
