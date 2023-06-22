@@ -11,15 +11,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObject.HomePageObject;
-import pageObject.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class lever_03_Page_Object_01_Register {
 	  private WebDriver driver;
 	  private String projectPath = System.getProperty("user.dir");
 	  private String firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;
-	  private HomePageObject homePage;
-	  private RegisterPageObject registerPage;
+	  private UserHomePageObject homePage;
+	  private UserRegisterPageObject registerPage;
   @BeforeClass
   public void beforeClass() {
 	  System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
@@ -34,14 +34,14 @@ public class lever_03_Page_Object_01_Register {
 	  wrongPassword = "123";
 	  wrongEmail = "123@456#%*"; 
 	  
-	  homePage = new HomePageObject(driver);
-	  registerPage = new RegisterPageObject(driver);
+	  homePage = new UserHomePageObject(driver);
+	  registerPage = new UserRegisterPageObject(driver);
 	  }
 
   @Test
   public void Register_01_Empty_Data() {
 	  	
-	  	homePage.clickToRegisterLink();
+	  	homePage.clickToRegisterLink(driver);
 	  
 	  	registerPage.clickToRegisterButton();
 	  	
@@ -59,7 +59,7 @@ public class lever_03_Page_Object_01_Register {
   @Test
   public void Register_02_Invalid_Email() {
 	  	
-	  	homePage.clickToRegisterLink();
+	  	homePage.clickToRegisterLink(driver);
 	  	
 	  	
 	  	
@@ -78,7 +78,7 @@ public class lever_03_Page_Object_01_Register {
   @Test
   public void Register_03_Success() {
 	  	
-	  	homePage.clickToRegisterLink();
+	  	homePage.clickToRegisterLink(driver);
 		
 	  	registerPage.inputToFirstnameTextbox(firstName);
 	  	registerPage.inputToLastNameTextbox(lastName);
@@ -87,7 +87,7 @@ public class lever_03_Page_Object_01_Register {
 	  	registerPage.inputToConfirmPasswordTextbox(passWord);
 	  	registerPage.clickToRegisterButton();
 	  	Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed");
-	  	registerPage.clickToLoginLink();
+	  	registerPage.clickToLoginLink(driver);
 		registerPage.inputToEmailTextbox(emailAddress);
 		registerPage.inputToPasswordTextbox(passWord);
 		registerPage.clickToLoginButton();
@@ -96,7 +96,7 @@ public class lever_03_Page_Object_01_Register {
   
   @Test
   public void Register_04_Existing_Email() {
-		homePage.clickToRegisterLink();
+		homePage.clickToRegisterLink(driver);
 	
 	  	registerPage.inputToFirstnameTextbox(firstName);
 	  	registerPage.inputToLastNameTextbox(lastName);
@@ -110,7 +110,7 @@ public class lever_03_Page_Object_01_Register {
   
   @Test
   public void Register_05_Password_Less_than_6_chars() {
-	  	homePage.clickToRegisterLink();
+	  	homePage.clickToRegisterLink(driver);
 		
 	  	registerPage.inputToFirstnameTextbox(firstName);
 	  	registerPage.inputToLastNameTextbox(lastName);
@@ -126,7 +126,7 @@ public class lever_03_Page_Object_01_Register {
   @Test
   public void Register_06_Invalid_Password() {
 	  
-		homePage.clickToRegisterLink();
+		homePage.clickToRegisterLink(driver);
 		
 	  	registerPage.inputToFirstnameTextbox(firstName);
 	  	registerPage.inputToLastNameTextbox(lastName);

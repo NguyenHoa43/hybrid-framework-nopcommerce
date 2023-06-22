@@ -12,16 +12,16 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.LoginPageObject;
-import pageObject.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class lever_04_Multiple_Browser extends BaseTest {
 	private WebDriver driverTestClass;
 	private String  firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
-	private HomePageObject homePage; 
+	private UserLoginPageObject loginPage;
+	private UserRegisterPageObject registerPage;
+	private UserHomePageObject homePage; 
 	@Parameters("browser")
 	@BeforeClass
 	  public void beforeClass(String browserName) {
@@ -33,11 +33,11 @@ public class lever_04_Multiple_Browser extends BaseTest {
 		  wrongPassword = "123";
 		  wrongEmail = "123@456#%*"; 
 		  
-		  homePage = new HomePageObject(driverTestClass);
-		  registerPage = new RegisterPageObject(driverTestClass);
-		  loginPage = new LoginPageObject(driverTestClass);
+		  homePage = new UserHomePageObject(driverTestClass);
+		  registerPage = new UserRegisterPageObject(driverTestClass);
+		  loginPage = new UserLoginPageObject(driverTestClass);
 		  
-		  homePage.clickToRegisterLink();
+		  homePage.clickToRegisterLink(driverTestClass);
 		  registerPage.inputToFirstnameTextbox(firstName);
 		  registerPage.inputToLastNameTextbox(lastName);
 		  registerPage.inputToEmailTextbox(emailAddress);
@@ -48,13 +48,14 @@ public class lever_04_Multiple_Browser extends BaseTest {
 	}
 	@Test
 	public void Login_01_Empty_Data() {
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
+		homePage.clickToLoginLink();
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email");		
 	}	
 	@Test
 	public void Login_02_Invalid_Email() {
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
 		loginPage.inputToEmailTextbox("hoa12");
 		loginPage.inputToPasswordTextbox(passWord);
 		loginPage.clickToLoginButton();
@@ -62,7 +63,8 @@ public class lever_04_Multiple_Browser extends BaseTest {
 	}	
 	@Test
 	public void Login_03_Unregister_Email() {
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
+		homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox("hoa12@gmail.com");
 		loginPage.inputToPasswordTextbox(passWord);
 		loginPage.clickToLoginButton();
@@ -70,14 +72,16 @@ public class lever_04_Multiple_Browser extends BaseTest {
 	}
 	@Test
 	public void Login_04_Empty_Password() {
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
+		homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox(emailAddress);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMessageAtPasswordTextbox(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 	}	
 	@Test
 	public void Login_05_Wrong_Password() {
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
+		homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox(emailAddress);
 		loginPage.inputToPasswordTextbox("123467");
 		loginPage.clickToLoginButton();
@@ -85,7 +89,8 @@ public class lever_04_Multiple_Browser extends BaseTest {
 	}
 	@Test
 	public void Login_06_Successfull() {
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
+		homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox(emailAddress);
 		loginPage.inputToPasswordTextbox(passWord);
 		loginPage.clickToLoginButton();

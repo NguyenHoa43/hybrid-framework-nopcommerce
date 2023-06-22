@@ -15,13 +15,27 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.nopCommerce.user.UserAddressPageObject;
+import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
+import pageObjects.nopCommerce.user.UserRewardPoinPageObject;
+import pageUIs.AddressPageUI;
+import pageUIs.BasePageUI;
+import pageUIs.HomePageUI;
+import pageUIs.LoginPageUI;
+import pageUIs.MyProductReviewPageUI;
+import pageUIs.RegisterPageUI;
+import pageUIs.RewardPoinPageUI;
+
 public class BasePage {
 
 	protected static BasePage getBasePageObject() {
 		return new BasePage();
 		
 	}
-	protected void openPageUrl(WebDriver driver, String pageUrl) {
+	public void openPageUrl(WebDriver driver, String pageUrl) {
 		driver.get(pageUrl);
 	}
 	
@@ -318,6 +332,42 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
 	}
 	
+	public UserAddressPageObject openAddressLink(WebDriver driver) {
+		waitForElementVisible(driver, BasePageUI.ADDRESS_LINK);
+		clickToElement(driver, BasePageUI.ADDRESS_LINK);
+		return PageGeneratorManager.getAddressPage(driver);
+	}
+	
+	public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
+		waitForElementVisible(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
+		clickToElement(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
+		return PageGeneratorManager.getMyProductReviewPage(driver);
+	}
+	
+	public UserRewardPoinPageObject openRewardPoin(WebDriver driver) {
+		waitForElementVisible(driver, BasePageUI.REWARD_POIN_LINK);
+		clickToElement(driver, BasePageUI.REWARD_POIN_LINK);
+		return PageGeneratorManager.getRewardPoinPage(driver);
+	}
+	
+	public UserCustomerInforPageObject clickToAccountLink(WebDriver driver) {
+		waitForElementVisible(driver, BasePageUI.ACCOUNT_LINK);
+		clickToElement(driver, BasePageUI.ACCOUNT_LINK);
+		return PageGeneratorManager.getAccountPage(driver);
+	}
+	
+	public UserRegisterPageObject clickToRegisterLink(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.REGISTER_LINK);
+		clickToElement(driver, BasePageUI.REGISTER_LINK);
+		return PageGeneratorManager.getRegisterPage(driver);
+	}
+	
+	public UserLoginPageObject clickToLoginLink(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.LOGIN_LINK);
+		clickToElement(driver, BasePageUI.LOGIN_LINK);
+		return PageGeneratorManager.getLoginPage(driver);
+		
+	}
 	private long longTimeout = 30;
 	private long shortTimeout = 5;
 }

@@ -12,21 +12,21 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.LoginPageObject;
-import pageObject.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 	private WebDriver driverTestClass;
 	private String  firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
-	private HomePageObject homePage; 
+	private UserLoginPageObject loginPage;
+	private UserRegisterPageObject registerPage;
+	private UserHomePageObject homePage; 
 	@Parameters("browser")
 	@BeforeClass
 	  public void beforeClass(String browserName) {
 		  driverTestClass = getBrowserDriver(browserName);
-		  homePage = new HomePageObject(driverTestClass);
+		  homePage = new UserHomePageObject(driverTestClass);
 		  emailAddress = "afc" + fadeNumber() + "@gmail.com";
 		  firstName = "Automation";
 		  lastName = "FC";
@@ -38,7 +38,7 @@ public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 		  
 		  
 		  
-		  registerPage = homePage.clickToRegisterLink();
+		  registerPage = homePage.clickToRegisterLink(driverTestClass);
 		  
 		  registerPage.inputToFirstnameTextbox(firstName);
 		  registerPage.inputToLastNameTextbox(lastName);
@@ -50,13 +50,13 @@ public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 	}
 	@Test
 	public void Login_01_Empty_Data() {
-		loginPage = registerPage.clickToLoginLink();
+		loginPage = registerPage.clickToLoginLink(driverTestClass);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email");		
 	}	
 	@Test
 	public void Login_02_Invalid_Email() {
-		loginPage = registerPage.clickToLoginLink();
+		loginPage = registerPage.clickToLoginLink(driverTestClass);
 		loginPage.inputToEmailTextbox("hoa12");
 		loginPage.inputToPasswordTextbox(passWord);
 		loginPage.clickToLoginButton();
@@ -64,7 +64,7 @@ public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 	}	
 	@Test
 	public void Login_03_Unregister_Email() {
-		loginPage = registerPage.clickToLoginLink();
+		loginPage = registerPage.clickToLoginLink(driverTestClass);
 		loginPage.inputToEmailTextbox("hoa12@gmail.com");
 		loginPage.inputToPasswordTextbox(passWord);
 		loginPage.clickToLoginButton();
@@ -72,14 +72,14 @@ public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 	}
 	@Test
 	public void Login_04_Empty_Password() {
-		loginPage = registerPage.clickToLoginLink();
+		loginPage = registerPage.clickToLoginLink(driverTestClass);
 		loginPage.inputToEmailTextbox(emailAddress);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMessageAtPasswordTextbox(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 	}	
 	@Test
 	public void Login_05_Wrong_Password() {
-		loginPage =  registerPage.clickToLoginLink();
+		loginPage =  registerPage.clickToLoginLink(driverTestClass);
 		loginPage.inputToEmailTextbox(emailAddress);
 		loginPage.inputToPasswordTextbox("123467");
 		loginPage.clickToLoginButton();
@@ -87,7 +87,7 @@ public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 	}
 	@Test
 	public void Login_06_Successfull() {
-		loginPage =  registerPage.clickToLoginLink();
+		loginPage =  registerPage.clickToLoginLink(driverTestClass);
 		loginPage.inputToEmailTextbox(emailAddress);
 		loginPage.inputToPasswordTextbox(passWord);
 		homePage = loginPage.clickToLoginButton();
