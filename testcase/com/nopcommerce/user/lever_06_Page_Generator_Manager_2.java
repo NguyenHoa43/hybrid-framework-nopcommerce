@@ -19,14 +19,14 @@ import pageObjects.nopCommerce.user.UserRegisterPageObject;
 public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 	private WebDriver driverTestClass;
 	private String  firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;;
-	private UserLoginPageObject loginPage;
-	private UserRegisterPageObject registerPage;
-	private UserHomePageObject homePage; 
+	private UserLoginPageObject userLoginPage;
+	private UserRegisterPageObject userRegisterPage;
+	private UserHomePageObject userHomePage; 
 	@Parameters("browser")
 	@BeforeClass
 	  public void beforeClass(String browserName) {
 		  driverTestClass = getBrowserDriver(browserName);
-		  homePage = new UserHomePageObject(driverTestClass);
+		  userHomePage = new UserHomePageObject(driverTestClass);
 		  emailAddress = "afc" + fadeNumber() + "@gmail.com";
 		  firstName = "Automation";
 		  lastName = "FC";
@@ -38,60 +38,60 @@ public class lever_06_Page_Generator_Manager_2 extends BaseTest {
 		  
 		  
 		  
-		  registerPage = homePage.clickToRegisterLink(driverTestClass);
+		  userRegisterPage = userHomePage.clickToRegisterLink(driverTestClass);
 		  
-		  registerPage.inputToFirstnameTextbox(firstName);
-		  registerPage.inputToLastNameTextbox(lastName);
-		  registerPage.inputToEmailTextbox(emailAddress);
-		  registerPage.inputToPasswordTextbox(passWord);
-		  registerPage.inputToConfirmPasswordTextbox(passWord);
-		  registerPage.clickToRegisterButton();
-		  Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed");
+		  userRegisterPage.inputToFirstnameTextbox(firstName);
+		  userRegisterPage.inputToLastNameTextbox(lastName);
+		  userRegisterPage.inputToEmailTextbox(emailAddress);
+		  userRegisterPage.inputToPasswordTextbox(passWord);
+		  userRegisterPage.inputToConfirmPasswordTextbox(passWord);
+		  userRegisterPage.clickToRegisterButton();
+		  Assert.assertEquals(userRegisterPage.getRegisterSuccessMessage(),"Your registration completed");
 	}
 	@Test
 	public void Login_01_Empty_Data() {
-		loginPage = registerPage.clickToLoginLink(driverTestClass);
-		loginPage.clickToLoginButton();
-		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email");		
+		userLoginPage = userRegisterPage.clickToLoginLink(driverTestClass);
+		userLoginPage.clickToLoginButton();
+		Assert.assertEquals(userLoginPage.getErrorMessageAtEmailTextbox(), "Please enter your email");		
 	}	
 	@Test
 	public void Login_02_Invalid_Email() {
-		loginPage = registerPage.clickToLoginLink(driverTestClass);
-		loginPage.inputToEmailTextbox("hoa12");
-		loginPage.inputToPasswordTextbox(passWord);
-		loginPage.clickToLoginButton();
-		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email");
+		userLoginPage = userRegisterPage.clickToLoginLink(driverTestClass);
+		userLoginPage.inputToEmailTextbox("hoa12");
+		userLoginPage.inputToPasswordTextbox(passWord);
+		userLoginPage.clickToLoginButton();
+		Assert.assertEquals(userLoginPage.getErrorMessageAtEmailTextbox(), "Wrong email");
 	}	
 	@Test
 	public void Login_03_Unregister_Email() {
-		loginPage = registerPage.clickToLoginLink(driverTestClass);
-		loginPage.inputToEmailTextbox("hoa12@gmail.com");
-		loginPage.inputToPasswordTextbox(passWord);
-		loginPage.clickToLoginButton();
-		Assert.assertEquals(loginPage.getErrorMessageEmailUnregister(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
+		userLoginPage = userRegisterPage.clickToLoginLink(driverTestClass);
+		userLoginPage.inputToEmailTextbox("hoa12@gmail.com");
+		userLoginPage.inputToPasswordTextbox(passWord);
+		userLoginPage.clickToLoginButton();
+		Assert.assertEquals(userLoginPage.getErrorMessageEmailUnregister(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 	}
 	@Test
 	public void Login_04_Empty_Password() {
-		loginPage = registerPage.clickToLoginLink(driverTestClass);
-		loginPage.inputToEmailTextbox(emailAddress);
-		loginPage.clickToLoginButton();
-		Assert.assertEquals(loginPage.getErrorMessageAtPasswordTextbox(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+		userLoginPage = userRegisterPage.clickToLoginLink(driverTestClass);
+		userLoginPage.inputToEmailTextbox(emailAddress);
+		userLoginPage.clickToLoginButton();
+		Assert.assertEquals(userLoginPage.getErrorMessageAtPasswordTextbox(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 	}	
 	@Test
 	public void Login_05_Wrong_Password() {
-		loginPage =  registerPage.clickToLoginLink(driverTestClass);
-		loginPage.inputToEmailTextbox(emailAddress);
-		loginPage.inputToPasswordTextbox("123467");
-		loginPage.clickToLoginButton();
-		Assert.assertEquals(loginPage.getErrorMessageAtWrongPasswordTextbox(),"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+		userLoginPage =  userRegisterPage.clickToLoginLink(driverTestClass);
+		userLoginPage.inputToEmailTextbox(emailAddress);
+		userLoginPage.inputToPasswordTextbox("123467");
+		userLoginPage.clickToLoginButton();
+		Assert.assertEquals(userLoginPage.getErrorMessageAtWrongPasswordTextbox(),"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 	}
 	@Test
 	public void Login_06_Successfull() {
-		loginPage =  registerPage.clickToLoginLink(driverTestClass);
-		loginPage.inputToEmailTextbox(emailAddress);
-		loginPage.inputToPasswordTextbox(passWord);
-		homePage = loginPage.clickToLoginButton();
-		Assert.assertTrue(homePage.isMyAccountLinkDisplay());
+		userLoginPage =  userRegisterPage.clickToLoginLink(driverTestClass);
+		userLoginPage.inputToEmailTextbox(emailAddress);
+		userLoginPage.inputToPasswordTextbox(passWord);
+		userHomePage = userLoginPage.clickToLoginButton();
+		Assert.assertTrue(userHomePage.isMyAccountLinkDisplay());
 	}	
 
 	@AfterClass

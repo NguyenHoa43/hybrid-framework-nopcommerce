@@ -16,14 +16,14 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPoinPageObject;
-import pageUIs.RewardPoinPageUI;
+import pageUIs.nopCommerce.user.RewardPoinPageUI;
 
 public class lever_07_Switch_Page extends BaseTest {
 	private WebDriver driverTestClass;
 	private String  firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;
 	private String dateOfBirth, monthOfBirth, yearOfBirth, companyName, cityAddress;
-	private UserLoginPageObject loginPage;
-	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject userLoginPage;
+	private UserRegisterPageObject userRegisterPage;
 	private UserHomePageObject UserHomePage;
 	private UserCustomerInforPageObject UserCustomerInfor;
 	private UserAddressPageObject UserAddressPage;
@@ -34,7 +34,7 @@ public class lever_07_Switch_Page extends BaseTest {
 	@BeforeClass
 	  public void beforeClass(String browserName) {
 		  driverTestClass = getBrowserDriver(browserName);
-		  UserHomePage = PageGeneratorManager.getHomePage(driverTestClass);
+		  UserHomePage = PageGeneratorManager.getUserHomePage(driverTestClass);
 		  emailAddress = "afc" + fadeNumber() + "@gmail.com";
 		  firstName = "Automation";
 		  lastName = "FC";
@@ -55,33 +55,33 @@ public class lever_07_Switch_Page extends BaseTest {
 	@Test
 	public void User_01_Register() {
 
-		  registerPage =  UserHomePage.clickToRegisterLink(driverTestClass);
+		  userRegisterPage =  UserHomePage.clickToRegisterLink(driverTestClass);
 
-		  registerPage.inputToFirstnameTextbox(firstName);
-		  registerPage.inputToLastNameTextbox(lastName);
-		  registerPage.inputToEmailTextbox(emailAddress);
-		  registerPage.inputToPasswordTextbox(passWord);
-		  registerPage.inputToConfirmPasswordTextbox(passWord);
-		  registerPage.clickToRegisterButton();
-		  Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed");		
+		  userRegisterPage.inputToFirstnameTextbox(firstName);
+		  userRegisterPage.inputToLastNameTextbox(lastName);
+		  userRegisterPage.inputToEmailTextbox(emailAddress);
+		  userRegisterPage.inputToPasswordTextbox(passWord);
+		  userRegisterPage.inputToConfirmPasswordTextbox(passWord);
+		  userRegisterPage.clickToRegisterButton();
+		  Assert.assertEquals(userRegisterPage.getRegisterSuccessMessage(),"Your registration completed");		
 	}	
 	@Test
 	public void User_02_Login() {
-		  loginPage = registerPage.clickToLoginLink(driverTestClass);
-		  loginPage.inputToEmailTextbox(emailAddress);
-		  loginPage.inputToPasswordTextbox(passWord);
-		  loginPage.clickToLoginButton();
+		  userLoginPage = userRegisterPage.clickToLoginLink(driverTestClass);
+		  userLoginPage.inputToEmailTextbox(emailAddress);
+		  userLoginPage.inputToPasswordTextbox(passWord);
+		  userLoginPage.clickToLoginButton();
 		  Assert.assertTrue(UserHomePage.isMyAccountLinkDisplay());
 	}	
 	@Test
 	public void User_3_My_Account() {
-		UserCustomerInfor = loginPage.clickToAccountLink(driverTestClass);
+		UserCustomerInfor = userLoginPage.clickToAccountLink(driverTestClass);
 		Assert.assertTrue(UserCustomerInfor.isMycustomerInforDisplay());
 	}
 	@Test
 	public void User_04_Switch_Page() {
 		
-		UserCustomerInfor = loginPage.clickToAccountLink(driverTestClass);
+		UserCustomerInfor = userLoginPage.clickToAccountLink(driverTestClass);
 		
 		UserAddressPage = UserCustomerInfor.openAddressLink(driverTestClass);
 		Assert.assertTrue(UserAddressPage.isDisplayAddressPage());
@@ -101,10 +101,6 @@ public class lever_07_Switch_Page extends BaseTest {
 		UserMyProductReviewPage = UserRewardPoinPage.openMyProductReviewPage(driverTestClass);
 		Assert.assertTrue(UserMyProductReviewPage.isDisplayProductReviewPage());
 	}	
-	//@Test
-	public void User_05_Switch_Role() {
-		
-	}
 	
 
 	@AfterClass

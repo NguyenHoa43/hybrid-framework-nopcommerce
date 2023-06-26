@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import commons.BagePageFactory;
-import pageUIs.RegisterPageUI;
+import pageUIs.nopCommerce.user.RegisterPageUI;
 
 public class RegisterPageObject extends BagePageFactory{
 	private WebDriver driver;

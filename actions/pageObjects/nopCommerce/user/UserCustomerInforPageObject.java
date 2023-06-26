@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
-import pageUIs.CustomerInforPageUI;
+import pageUIs.nopCommerce.user.CustomerInforPageUI;
 
 public class UserCustomerInforPageObject extends BasePage {
 	private WebDriver driver;
@@ -16,7 +16,7 @@ public class UserCustomerInforPageObject extends BasePage {
 	public UserCustomerInforPageObject clickToMyAccoutLink() {
 		waitForElementClickable(driver, CustomerInforPageUI.ACCOUNT_LINK);
 		clickToElement(driver,CustomerInforPageUI.ACCOUNT_LINK);
-		return PageGeneratorManager.getAccountPage(driver);
+		return PageGeneratorManager.getUserAccountPage(driver);
 	}
 	
 	
@@ -73,7 +73,7 @@ public class UserCustomerInforPageObject extends BasePage {
 	public UserAddressPageObject clickToButtonAddressLink() {
 		waitForElementClickable(driver, CustomerInforPageUI.ADDRESS_LINK);
 		clickToElement(driver, CustomerInforPageUI.ADDRESS_LINK);
-		return PageGeneratorManager.getAddressPage(driver);
+		return PageGeneratorManager.getUserAddressPage(driver);
 	}
 	
 	public void clickToButtonAddnewLink() {

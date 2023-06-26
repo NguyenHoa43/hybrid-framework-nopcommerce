@@ -3,7 +3,7 @@ package pageObjects.nopCommerce.user;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.RewardPoinPageUI;
+import pageUIs.nopCommerce.user.RewardPoinPageUI;
 
 public class UserRewardPoinPageObject extends BasePage{
 	private WebDriver driver;

@@ -51,11 +51,11 @@ public class BaseTest {
 			throw new RuntimeException("Browser name invalid !");
 		}
 		driverBaseTest.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		driverBaseTest.get("https://demo.nopcommerce.com/");
+		driverBaseTest.get(GlobalConstants.USER_PAGE_URL);
 		return driverBaseTest;
 	}
 	protected int fadeNumber() {
 		Random rand = new Random();
-		return rand.nextInt(9999);
+		return rand.nextInt(99999);
 	}
 }

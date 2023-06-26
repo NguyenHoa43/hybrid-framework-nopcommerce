@@ -27,7 +27,7 @@ public class lever_06_Page_Generator_Manager_3 extends BaseTest {
 	@BeforeClass
 	  public void beforeClass(String browserName) {
 		  driverTestClass = getBrowserDriver(browserName);
-		  UserHomePage = PageGeneratorManager.getHomePage(driverTestClass);
+		  UserHomePage = PageGeneratorManager.getUserHomePage(driverTestClass);
 		  emailAddress = "afc" + fadeNumber() + "@gmail.com";
 		  firstName = "Automation";
 		  lastName = "FC";

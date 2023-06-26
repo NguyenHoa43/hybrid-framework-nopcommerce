@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
-import pageUIs.LoginPageUI;
+import pageUIs.nopCommerce.user.LoginPageUI;
 
 public class UserLoginPageObject extends BasePage {
 	private WebDriver driver;
@@ -15,7 +15,7 @@ public class UserLoginPageObject extends BasePage {
 	public UserHomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.BUTTON_LOGIN);
 		clickToElement(driver, LoginPageUI.BUTTON_LOGIN);
-		return PageGeneratorManager.getHomePage(driver);
+		return PageGeneratorManager.getUserHomePage(driver);
 	}
 	
 	public void inputToEmailTextbox(String email) {
@@ -48,9 +48,10 @@ public class UserLoginPageObject extends BasePage {
 		return getElementText(driver, LoginPageUI.PASSWORD_ERROR_MESSAGE_WRONGPASSWORD);
 	}
 	
-	public UserHomePageObject loginAsUser(String emailAddress, String passWord) {
-		inputToEmailTextbox(emailAddress);
-		inputToPasswordTextbox(passWord);
+	
+	public UserHomePageObject loginAsUser(String userEmailAddress, String userPassWord) {
+		inputToEmailTextbox(userEmailAddress);
+		inputToPasswordTextbox(userPassWord);
 		return clickToLoginButton();
 	}
 	
