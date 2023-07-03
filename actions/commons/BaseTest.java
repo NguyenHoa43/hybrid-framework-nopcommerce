@@ -29,7 +29,11 @@ public class BaseTest {
 		}else if(browserName.equals("coccoc")) {
 			WebDriverManager.chromedriver().driverVersion("112.0.5615.28").setup();
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			if(GlobalConstants.OS_NAME.startsWith("Windows")) {
+				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			}else {
+				options.setBinary(".....");
+			}
 			driverBaseTest = new ChromeDriver(options);
 		}else if(browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -50,7 +54,7 @@ public class BaseTest {
 		}else {
 			throw new RuntimeException("Browser name invalid !");
 		}
-		driverBaseTest.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIME_OUT, TimeUnit.SECONDS);
 		driverBaseTest.get(GlobalConstants.USER_PAGE_URL);
 		return driverBaseTest;
 	}

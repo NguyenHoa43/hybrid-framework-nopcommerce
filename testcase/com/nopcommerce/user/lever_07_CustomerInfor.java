@@ -61,7 +61,7 @@ public class lever_07_CustomerInfor extends BaseTest {
 	}
 	@Test
 	public void Account_01_Update_Infor() {
-		userCustomerInfor = userLoginPage.clickToAccountLink(driverTestClass);
+		userCustomerInfor = userLoginPage.openCustomerInfor(driverTestClass);
 		userCustomerInfor.clickToGender();
 		userCustomerInfor.inputFirstName(firstName);
 		userCustomerInfor.inputLastName(lastName);

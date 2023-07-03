@@ -18,14 +18,14 @@ import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPoinPageObject;
 import pageUIs.nopCommerce.user.RewardPoinPageUI;
 
-public class lever_07_Switch_Page extends BaseTest {
+public class lever_09_Dynamic_Locator extends BaseTest {
 	private WebDriver driverTestClass;
 	private String  firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;
 	private String dateOfBirth, monthOfBirth, yearOfBirth, companyName, cityAddress;
 	private UserLoginPageObject userLoginPage;
 	private UserRegisterPageObject userRegisterPage;
 	private UserHomePageObject UserHomePage;
-	private UserCustomerInforPageObject UserCustomerInfor;
+	private UserCustomerInforPageObject UserCustomerInforPage;
 	private UserAddressPageObject UserAddressPage;
 	private UserRewardPoinPageObject UserRewardPoinPage;
 	private UserMyProductReviewPageObject UserMyProductReviewPage;
@@ -53,7 +53,7 @@ public class lever_07_Switch_Page extends BaseTest {
 		  
 	}
 	@Test
-	public void User_01_Register() {
+	public void User_01_Register_Login() {
 
 		  userRegisterPage =  UserHomePage.clickToRegisterLink(driverTestClass);
 
@@ -64,26 +64,20 @@ public class lever_07_Switch_Page extends BaseTest {
 		  userRegisterPage.inputToConfirmPasswordTextbox(passWord);
 		  userRegisterPage.clickToRegisterButton();
 		  Assert.assertEquals(userRegisterPage.getRegisterSuccessMessage(),"Your registration completed");		
-	}	
-	@Test
-	public void User_02_Login() {
+	
 		  userLoginPage = userRegisterPage.clickToLoginLink(driverTestClass);
 		  userLoginPage.inputToEmailTextbox(emailAddress);
 		  userLoginPage.inputToPasswordTextbox(passWord);
 		  userLoginPage.clickToLoginButton();
 		  Assert.assertTrue(UserHomePage.isMyAccountLinkDisplay());
-	}	
-	@Test
-	public void User_3_My_Account() {
-		UserCustomerInfor = userLoginPage.openCustomerInfor(driverTestClass);
-		Assert.assertTrue(UserCustomerInfor.isMycustomerInforDisplay());
+	
+		  UserCustomerInforPage = userLoginPage.clickToAccountLink(driverTestClass);
+		  Assert.assertTrue(UserCustomerInforPage.isMycustomerInforDisplay());
 	}
 	@Test
-	public void User_04_Switch_Page() {
+	public void User_02_Dynamic_Page() {
 		
-		UserCustomerInfor = userLoginPage.openCustomerInfor(driverTestClass);
-		
-		UserAddressPage = UserCustomerInfor.openAddressLink(driverTestClass);
+		UserAddressPage = UserCustomerInforPage.openAddressLink(driverTestClass);
 		Assert.assertTrue(UserAddressPage.isDisplayAddressPage());
 		
 		UserMyProductReviewPage = UserAddressPage.openMyProductReviewPage(driverTestClass);
@@ -100,6 +94,45 @@ public class lever_07_Switch_Page extends BaseTest {
 		
 		UserMyProductReviewPage = UserRewardPoinPage.openMyProductReviewPage(driverTestClass);
 		Assert.assertTrue(UserMyProductReviewPage.isDisplayProductReviewPage());
+	}	
+	@Test
+	public void User_03_Dynamic_Page_01() {
+		
+		UserRewardPoinPage = (UserRewardPoinPageObject) UserMyProductReviewPage.openPagesAtMyAccountByName(driverTestClass, "Reward points");
+		Assert.assertTrue(UserRewardPoinPage.isDisplayRewardPoinPage());
+		
+		UserAddressPage = (UserAddressPageObject) UserRewardPoinPage.openPagesAtMyAccountByName(driverTestClass, "Addresses");
+		Assert.assertTrue(UserAddressPage.isDisplayAddressPage());
+		
+		UserRewardPoinPage = (UserRewardPoinPageObject) UserMyProductReviewPage.openPagesAtMyAccountByName(driverTestClass, "Reward points");
+		Assert.assertTrue(UserRewardPoinPage.isDisplayRewardPoinPage());
+		
+		UserMyProductReviewPage =  (UserMyProductReviewPageObject) UserRewardPoinPage.openPagesAtMyAccountByName(driverTestClass, "My product reviews");
+		Assert.assertTrue(UserMyProductReviewPage.isDisplayProductReviewPage());
+		
+		UserCustomerInforPage = (UserCustomerInforPageObject) UserMyProductReviewPage.openPagesAtMyAccountByName(driverTestClass, "Customer info");
+	}	
+	@Test
+	public void User_04_Dynamic_Page_01() {
+		
+		
+		UserCustomerInforPage.openPagesAtMyAccountByName(driverTestClass, "My product reviews");
+		UserMyProductReviewPage = PageGeneratorManager.getUserMyProductReviewPage(driverTestClass);
+		UserMyProductReviewPage.openPagesAtMyAccountByName(driverTestClass, "Reward points");
+		UserRewardPoinPage = PageGeneratorManager.getUserRewardPoinPage(driverTestClass);
+		Assert.assertTrue(UserRewardPoinPage.isDisplayRewardPoinPage());
+		UserRewardPoinPage.openPagesAtMyAccountByName(driverTestClass, "Addresses");
+		UserAddressPage = PageGeneratorManager.getUserAddressPage(driverTestClass);
+		Assert.assertTrue(UserAddressPage.isDisplayAddressPage());
+		UserAddressPage.openPagesAtMyAccountByName(driverTestClass, "Reward points");
+		UserRewardPoinPage = PageGeneratorManager.getUserRewardPoinPage(driverTestClass);
+		Assert.assertTrue(UserRewardPoinPage.isDisplayRewardPoinPage());
+		UserRewardPoinPage.openPagesAtMyAccountByName(driverTestClass, "My product reviews");
+		UserMyProductReviewPage = PageGeneratorManager.getUserMyProductReviewPage(driverTestClass);
+		Assert.assertTrue(UserMyProductReviewPage.isDisplayProductReviewPage());
+		UserMyProductReviewPage.openPagesAtMyAccountByName(driverTestClass, "Customer info");
+		UserCustomerInforPage = PageGeneratorManager.getUserAccountPage(driverTestClass);
+		
 	}	
 	
 
