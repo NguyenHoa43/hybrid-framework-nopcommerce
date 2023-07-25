@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite  name="NopCommerce">
 
-
+	<listeners>
+        
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+	</listeners>
+	
 	<test name="Run On Firefox">
 	<parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="com.nopcommerce.user.lever_09_Dynamic_Locator"/>
+      <class name="com.nopcommerce.user.lever_07_CustomerInfor"/>
     </classes>
   	</test> 
+  	
+  	<!--<test name="Run On CHROME">
+	<parameter name = "browser" value = "chrome"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_07_CustomerInfor"/>
+    </classes>
+  	</test> -->
   	
 	<!--  <test name="Run On Firefox">
 	<parameter name = "browser" value = "firefox"/>

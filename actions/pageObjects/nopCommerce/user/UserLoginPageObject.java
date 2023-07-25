@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
+import pageUIs.nopCommerce.user.BasePageUI;
 import pageUIs.nopCommerce.user.LoginPageUI;
 
 public class UserLoginPageObject extends BasePage {
@@ -53,6 +54,11 @@ public class UserLoginPageObject extends BasePage {
 		inputToEmailTextbox(userEmailAddress);
 		inputToPasswordTextbox(userPassWord);
 		return clickToLoginButton();
+	}
+	public UserCustomerInforPageObject openCustomerInfor(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.CUSTOMER_INFOR_LINK);
+		clickToElement(driver, BasePageUI.CUSTOMER_INFOR_LINK);
+		return PageGeneratorManager.getUserAccountPage(driver);
 	}
 	
 }

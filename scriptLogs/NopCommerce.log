@@ -1,0 +1,92 @@
+[INFO ] [2023-07-25 20:32:32,641] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2023-07-25 20:33:22,705] Update Address - Step 01: Opent Address Page
+[INFO ] [2023-07-25 20:37:04,997] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2023-07-25 20:37:55,093] Update Address - Step 01: Opent Address Page
+[INFO ] [2023-07-25 20:50:18,911] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2023-07-25 20:51:08,968] Update Address - Step 01: Opent Address Page
+[INFO ] [2023-07-25 20:52:38,048] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2023-07-25 20:53:28,108] Update Address - Step 01: Opent Address Page
+[INFO ] [2023-07-25 20:59:52,355] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2023-07-25 20:59:52,867] Update Infor - Step 02: Select Sex
+[INFO ] [2023-07-25 20:59:53,205] Update Infor - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2023-07-25 20:59:53,320] Update Infor - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2023-07-25 20:59:53,460] Update Infor - Step 05: Import Date of Birth with value is '1'
+[INFO ] [2023-07-25 20:59:53,844] Update Infor - Step 06: Import Month of Birth with value is 'January'
+[INFO ] [2023-07-25 20:59:54,166] Update Infor - Step 07: Import Years of Birth with value is '1999'
+[INFO ] [2023-07-25 20:59:54,494] Update Infor - Step 08: Import Email with value is 'afc23726@gmail.com'
+[INFO ] [2023-07-25 20:59:54,677] Update Infor - Step 09: Import Company Name with value is 'Automation FC'
+[INFO ] [2023-07-25 20:59:54,811] Update Infor - Step 10: Save Information
+[INFO ] [2023-07-25 20:59:55,783] Update Infor - Step 11: Verify Save information successfully
+[INFO ] [2023-07-25 20:59:55,896] Update Address - Step 01: Opent Address Page
+[INFO ] [2023-07-25 20:59:56,382] Update Address - Step 02: Opent Addnew Address Page
+[INFO ] [2023-07-25 20:59:56,957] Update Address - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2023-07-25 20:59:57,115] Update Address - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2023-07-25 20:59:57,286] Update Address - Step 05: Import Email Address with value is 'afc23726@gmail.com'
+[INFO ] [2023-07-25 20:59:57,434] Update Address - Step 06: Import Company Name with value is 'Automation FC'
+[INFO ] [2023-07-25 20:59:57,558] Update Address - Step 07: Select ID Address Country
+[INFO ] [2023-07-25 20:59:57,945] Update Address - Step 08: Select ID Address Stateptovince
+[INFO ] [2023-07-25 20:59:58,058] Update Address - Step 09: Import Address City
+[INFO ] [2023-07-25 20:59:58,182] Update Address - Step 10: Import Address One
+[INFO ] [2023-07-25 20:59:58,340] Update Address - Step 11: Import Address Two
+[INFO ] [2023-07-25 20:59:58,483] Update Address - Step 12: Import Zipcode Address
+[INFO ] [2023-07-25 20:59:58,636] Update Address - Step 13: Import Phone Number
+[INFO ] [2023-07-25 20:59:58,786] Update Address - Step 14: Import Fax Number
+[INFO ] [2023-07-25 20:59:58,929] Update Address - Step 15: Save Information Address
+[INFO ] [2023-07-25 20:59:59,756] Update Address - Step 16: Verify Addnew Address Successfully
+[INFO ] [2023-07-25 20:59:59,853] Update Address - Step 17: Click Button Message Successfully
+[INFO ] [2023-07-25 21:07:15,106] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2023-07-25 21:07:15,631] Update Infor - Step 02: Select Sex
+[INFO ] [2023-07-25 21:07:15,949] Update Infor - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2023-07-25 21:07:16,084] Update Infor - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2023-07-25 21:07:16,268] Update Infor - Step 05: Import Date of Birth with value is '1'
+[INFO ] [2023-07-25 21:07:16,637] Update Infor - Step 06: Import Month of Birth with value is 'January'
+[INFO ] [2023-07-25 21:07:16,996] Update Infor - Step 07: Import Years of Birth with value is '1999'
+[INFO ] [2023-07-25 21:07:17,313] Update Infor - Step 08: Import Email with value is 'afc27030@gmail.com'
+[INFO ] [2023-07-25 21:07:17,529] Update Infor - Step 09: Import Company Name with value is 'Automation FC'
+[INFO ] [2023-07-25 21:07:17,683] Update Infor - Step 10: Save Information
+[INFO ] [2023-07-25 21:07:18,486] Update Infor - Step 11: Verify Save information successfully
+[INFO ] [2023-07-25 21:07:18,606] Update Address - Step 01: Opent Address Page
+[INFO ] [2023-07-25 21:07:19,109] Update Address - Step 02: Opent Addnew Address Page
+[INFO ] [2023-07-25 21:07:19,724] Update Address - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2023-07-25 21:07:19,859] Update Address - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2023-07-25 21:07:20,023] Update Address - Step 05: Import Email Address with value is 'afc27030@gmail.com'
+[INFO ] [2023-07-25 21:07:20,238] Update Address - Step 06: Import Company Name with value is 'Automation FC'
+[INFO ] [2023-07-25 21:07:20,407] Update Address - Step 07: Select ID Address Country
+[INFO ] [2023-07-25 21:07:20,794] Update Address - Step 08: Select ID Address Stateptovince
+[INFO ] [2023-07-25 21:07:20,882] Update Address - Step 09: Import Address City
+[INFO ] [2023-07-25 21:07:21,028] Update Address - Step 10: Import Address One
+[INFO ] [2023-07-25 21:07:21,191] Update Address - Step 11: Import Address Two
+[INFO ] [2023-07-25 21:07:21,344] Update Address - Step 12: Import Zipcode Address
+[INFO ] [2023-07-25 21:07:21,520] Update Address - Step 13: Import Phone Number
+[INFO ] [2023-07-25 21:07:21,678] Update Address - Step 14: Import Fax Number
+[INFO ] [2023-07-25 21:07:21,920] Update Address - Step 15: Save Information Address
+[INFO ] [2023-07-25 21:07:22,819] Update Address - Step 16: Verify Addnew Address Successfully
+[INFO ] [2023-07-25 21:07:22,927] Update Address - Step 17: Click Button Message Successfully
+[INFO ] [2023-07-25 21:21:06,833] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2023-07-25 21:21:07,439] Update Infor - Step 02: Select Sex
+[INFO ] [2023-07-25 21:21:07,770] Update Infor - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2023-07-25 21:21:07,919] Update Infor - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2023-07-25 21:21:08,133] Update Infor - Step 05: Import Date of Birth with value is '1'
+[INFO ] [2023-07-25 21:21:08,529] Update Infor - Step 06: Import Month of Birth with value is 'January'
+[INFO ] [2023-07-25 21:21:08,890] Update Infor - Step 07: Import Years of Birth with value is '1999'
+[INFO ] [2023-07-25 21:21:09,258] Update Infor - Step 08: Import Email with value is 'afc76176@gmail.com'
+[INFO ] [2023-07-25 21:21:09,486] Update Infor - Step 09: Import Company Name with value is 'Automation FC'
+[INFO ] [2023-07-25 21:21:09,631] Update Infor - Step 10: Save Information
+[INFO ] [2023-07-25 21:21:10,829] Update Infor - Step 11: Verify Save information successfully
+[INFO ] [2023-07-25 21:21:10,935] Update Address - Step 01: Opent Address Page
+[INFO ] [2023-07-25 21:21:12,129] Update Address - Step 02: Opent Addnew Address Page
+[INFO ] [2023-07-25 21:21:13,687] Update Address - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2023-07-25 21:21:13,804] Update Address - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2023-07-25 21:21:13,969] Update Address - Step 05: Import Email Address with value is 'afc76176@gmail.com'
+[INFO ] [2023-07-25 21:21:14,116] Update Address - Step 06: Import Company Name with value is 'Automation FC'
+[INFO ] [2023-07-25 21:21:14,297] Update Address - Step 07: Select ID Address Country
+[INFO ] [2023-07-25 21:21:14,688] Update Address - Step 08: Select ID Address Stateptovince
+[INFO ] [2023-07-25 21:21:14,925] Update Address - Step 09: Import Address City
+[INFO ] [2023-07-25 21:21:15,068] Update Address - Step 10: Import Address One
+[INFO ] [2023-07-25 21:21:15,245] Update Address - Step 11: Import Address Two
+[INFO ] [2023-07-25 21:21:15,443] Update Address - Step 12: Import Zipcode Address
+[INFO ] [2023-07-25 21:21:15,579] Update Address - Step 13: Import Phone Number
+[INFO ] [2023-07-25 21:21:15,710] Update Address - Step 14: Import Fax Number
+[INFO ] [2023-07-25 21:21:15,875] Update Address - Step 15: Save Information Address
+[INFO ] [2023-07-25 21:21:19,178] Update Address - Step 16: Verify Addnew Address Successfully
+[INFO ] [2023-07-25 21:21:19,243] Update Address - Step 17: Click Button Message Successfully

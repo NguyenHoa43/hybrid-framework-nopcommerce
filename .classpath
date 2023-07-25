@@ -18,7 +18,6 @@
 	<classpathentry kind="lib" path="libraryWebDriverManager/commons-codec-1.15.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/commons-compress-1.21.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/commons-io-2.6.jar"/>
-	<classpathentry kind="lib" path="libraryWebDriverManager/commons-lang3-3.12.0.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/dec-0.1.2.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/docker-java-3.2.13.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/docker-java-api-3.2.13.jar"/>
@@ -33,9 +32,16 @@
 	<classpathentry kind="lib" path="libraryWebDriverManager/jackson-annotations-2.10.3.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/jackson-core-2.10.3.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/jackson-databind-2.10.3.jar"/>
-	<classpathentry kind="lib" path="libraryWebDriverManager/jcl-over-slf4j-1.7.30.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/jna-5.8.0.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/slf4j-api-2.0.3.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/webdrivermanager-5.3.1.jar"/>
+	<classpathentry kind="lib" path="libraryLog4J/commons-lang3-3.8.1.jar"/>
+	<classpathentry kind="lib" path="libraryLog4J/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="libraryLog4J/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="libraryWebDriverManager/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/reportng-1.1.4.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/velocity-1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

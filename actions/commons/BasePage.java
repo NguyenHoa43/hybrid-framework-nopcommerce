@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -23,13 +24,7 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPoinPageObject;
-import pageUIs.nopCommerce.user.AddressPageUI;
 import pageUIs.nopCommerce.user.BasePageUI;
-import pageUIs.nopCommerce.user.HomePageUI;
-import pageUIs.nopCommerce.user.LoginPageUI;
-import pageUIs.nopCommerce.user.MyProductReviewPageUI;
-import pageUIs.nopCommerce.user.RegisterPageUI;
-import pageUIs.nopCommerce.user.RewardPoinPageUI;
 
 public class BasePage {
 
@@ -208,7 +203,7 @@ public class BasePage {
 				}
 	}
 
-	protected void sleep(long timeInSecond) {
+	public void sleep(long timeInSecond) {
 		try {
 		Thread.sleep(timeInSecond * 1000);
 			} catch (InterruptedException e) {
@@ -287,6 +282,14 @@ public class BasePage {
 		action.moveToElement(getWebElement(driver, locatorType)).perform();
 	}
 
+	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, locatorType), key).perform();
+	}
+	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)), key).perform();
+	}
 
 	protected void scrollToBottomPage(WebDriver driver) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
