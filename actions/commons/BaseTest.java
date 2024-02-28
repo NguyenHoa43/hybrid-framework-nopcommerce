@@ -35,7 +35,7 @@ public class BaseTest {
 			options.addArguments("window-size=1920x1080");
 			driverBaseTest = new FirefoxDriver(options);
 		}else if(browserName.equals("coccoc")) {
-			WebDriverManager.chromedriver().driverVersion("112.0.5615.28").setup();
+			WebDriverManager.chromedriver().driverVersion("122.0.6261.69").setup();
 			ChromeOptions options = new ChromeOptions();
 			if(GlobalConstants.OS_NAME.startsWith("Windows")) {
 				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");

@@ -107,9 +107,9 @@ public class lever_01_Register_DRY {
 	Random  rand = new Random();
 	return rand.nextInt(9999);
   }
-  @AfterClass
-  public void afterClass() {
-	  driver.quit();
-  }
+  //@AfterClass
+  //public void afterClass() {
+	//  driver.quit();
+  //}
 
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite  name="NopCommerce">
+
+	<parameter name = "url" value = "https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/" />
+	<test name="Run On Firefox">
+	<parameter name = "browser" value = "firefox"/>
+    <classes>
+      <class name="com.jquery.datatable.lever_10_DataTable_Grid"/>
+    </classes>
+  	</test> 
+  	
+	<!--  <test name="Run On Firefox">
+	<parameter name = "browser" value = "firefox"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
+    </classes>
+  	</test> 
+  	<test name="Run On Headless Firefox">
+	<parameter name = "browser" value = "headlessfirefox"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
+    </classes>
+    </test> 
+ 	<test name="Run On Chrome">
+	<parameter name = "browser" value = "chrome"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
+    </classes>
+  	</test> 
+  	<test name="Run On Headless Chrome">
+	<parameter name = "browser" value = "headlesschrome"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
+    </classes>
+  	</test> 
+  	<test name="Run On Edge">
+	<parameter name = "browser" value = "edge"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
+    </classes>
+ 	 </test> 
+  	<test name="Run On Coc Coc">
+	<parameter name = "browser" value = "coccoc"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
+    </classes>
+  	</test> 
+  	<test name="Run On Opera">
+	<parameter name = "browser" value = "opera"/>
+    <classes>
+      <class name="com.nopcommerce.user.lever_04_Multiple_Browser"/>
+    </classes>
+  	</test> -->
+  
+</suite> 
