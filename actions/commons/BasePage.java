@@ -116,7 +116,7 @@ public class BasePage {
 		}
 	}
 	
-	private List<WebElement> getListWebElement(WebDriver driver, String locatorType){
+	public List<WebElement> getListWebElement(WebDriver driver, String locatorType){
 		return driver.findElements(getByLocator(locatorType));
 	}
 	

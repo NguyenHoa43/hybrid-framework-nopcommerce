@@ -109,6 +109,8 @@ public class BaseTest {
 		driverBaseTest.get(appURL);
 		return driverBaseTest;
 	}
+	
+	
 	protected int fadeNumber() {
 		Random rand = new Random();
 		return rand.nextInt(99999);

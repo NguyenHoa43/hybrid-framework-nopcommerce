@@ -146,3 +146,31 @@
 [INFO ] [2023-08-07 10:24:59,922] Update Address - Step 15: Save Information Address
 [INFO ] [2023-08-07 10:25:01,488] Update Address - Step 16: Verify Addnew Address Successfully
 [INFO ] [2023-08-07 10:25:01,601] Update Address - Step 17: Click Button Message Successfully
+[INFO ] [2024-02-29 10:35:58,992] Update Infor - Step 01: Navigate to 'Customer Information' page
+[INFO ] [2024-02-29 10:35:59,427] Update Infor - Step 02: Select Sex
+[INFO ] [2024-02-29 10:35:59,861] Update Infor - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2024-02-29 10:36:00,016] Update Infor - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2024-02-29 10:36:00,165] Update Infor - Step 05: Import Date of Birth with value is '1'
+[INFO ] [2024-02-29 10:36:00,481] Update Infor - Step 06: Import Month of Birth with value is 'January'
+[INFO ] [2024-02-29 10:36:00,807] Update Infor - Step 07: Import Years of Birth with value is '1999'
+[INFO ] [2024-02-29 10:36:01,115] Update Infor - Step 08: Import Email with value is 'afc86993@gmail.com'
+[INFO ] [2024-02-29 10:36:01,230] Update Infor - Step 09: Import Company Name with value is 'Automation FC'
+[INFO ] [2024-02-29 10:36:01,338] Update Infor - Step 10: Save Information
+[INFO ] [2024-02-29 10:36:02,060] Update Infor - Step 11: Verify Save information successfully
+[INFO ] [2024-02-29 10:36:02,229] Update Address - Step 01: Opent Address Page
+[INFO ] [2024-02-29 10:36:02,655] Update Address - Step 02: Opent Addnew Address Page
+[INFO ] [2024-02-29 10:36:03,181] Update Address - Step 03: Import First Name with value is 'Automation'
+[INFO ] [2024-02-29 10:36:03,363] Update Address - Step 04: Import Last Name with value is 'FC'
+[INFO ] [2024-02-29 10:36:03,548] Update Address - Step 05: Import Email Address with value is 'afc86993@gmail.com'
+[INFO ] [2024-02-29 10:36:03,699] Update Address - Step 06: Import Company Name with value is 'Automation FC'
+[INFO ] [2024-02-29 10:36:03,865] Update Address - Step 07: Select ID Address Country
+[INFO ] [2024-02-29 10:36:04,223] Update Address - Step 08: Select ID Address Stateptovince
+[INFO ] [2024-02-29 10:36:04,320] Update Address - Step 09: Import Address City
+[INFO ] [2024-02-29 10:36:04,432] Update Address - Step 10: Import Address One
+[INFO ] [2024-02-29 10:36:04,541] Update Address - Step 11: Import Address Two
+[INFO ] [2024-02-29 10:36:04,694] Update Address - Step 12: Import Zipcode Address
+[INFO ] [2024-02-29 10:36:04,822] Update Address - Step 13: Import Phone Number
+[INFO ] [2024-02-29 10:36:04,919] Update Address - Step 14: Import Fax Number
+[INFO ] [2024-02-29 10:36:05,038] Update Address - Step 15: Save Information Address
+[INFO ] [2024-02-29 10:36:06,721] Update Address - Step 16: Verify Addnew Address Successfully
+[INFO ] [2024-02-29 10:36:06,836] Update Address - Step 17: Click Button Message Successfully
