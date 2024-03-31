@@ -32,5 +32,4 @@ public class CustomerInforPageUI {
 	public static final String SAVE_ADDRESS_LINK = "xpath=//button[@class='button-1 save-address-button']";
 	public static final String TEXT_ACCOUNT_PAGE = "xpath=//h1[text()='My account - Customer info']";
 
-
 }

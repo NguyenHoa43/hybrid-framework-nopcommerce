@@ -1,5 +1,6 @@
 package commons;
 
+import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -11,106 +12,99 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.opera.OperaDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
+
 
 public class BaseTest {
-	
+
 	private WebDriver driverBaseTest;
 	protected final Log log;
-	
+
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
-	
-	protected WebDriver getBrowserDriver(String browserName ) {
-		if(browserName.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+
+	protected WebDriver getBrowserDriver(String browserName) {
+		if (browserName.equals("firefox")) {
+			
 			driverBaseTest = new FirefoxDriver();
-		}else if(browserName.equals("headlessfirefox")) {
-			WebDriverManager.firefoxdriver().setup();
+		} else if (browserName.equals("headlessfirefox")) {
+			
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driverBaseTest = new FirefoxDriver(options);
-		}else if(browserName.equals("coccoc")) {
-			WebDriverManager.chromedriver().driverVersion("122.0.6261.69").setup();
+		} else if (browserName.equals("coccoc")) {
+			
 			ChromeOptions options = new ChromeOptions();
-			if(GlobalConstants.OS_NAME.startsWith("Windows")) {
+			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
 				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
-			}else {
+			} else {
 				options.setBinary(".....");
 			}
 			driverBaseTest = new ChromeDriver(options);
-		}else if(browserName.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
+		} else if (browserName.equals("chrome")) {
+			
 			driverBaseTest = new ChromeDriver();
-		}else if(browserName.equals("headlesschrome")) {
-			WebDriverManager.chromedriver().setup();
+		} else if (browserName.equals("headlesschrome")) {
+			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driverBaseTest = new ChromeDriver(options);
-		}else if(browserName.equals("opera")) {
-			WebDriverManager.operadriver().setup();
-			driverBaseTest = WebDriverManager.operadriver().create();
-		}
-		else if(browserName.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
+		
+		} else if (browserName.equals("edge")) {
+			
 			driverBaseTest = new EdgeDriver();
-		}else {
+		} else {
 			throw new RuntimeException("Browser name invalid !");
 		}
-		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIME_OUT, TimeUnit.SECONDS);
+		driverBaseTest.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
 		driverBaseTest.get(GlobalConstants.USER_PAGE_URL);
 		return driverBaseTest;
 	}
-	
+
 	protected WebDriver getBrowserDriver(String browserName, String appURL) {
-		if(browserName.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+		if (browserName.equals("firefox")) {
+			
 			driverBaseTest = new FirefoxDriver();
-		}else if(browserName.equals("headlessfirefox")) {
-			WebDriverManager.firefoxdriver().setup();
+		} else if (browserName.equals("headlessfirefox")) {
+			
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driverBaseTest = new FirefoxDriver(options);
-		}else if(browserName.equals("coccoc")) {
-			WebDriverManager.chromedriver().driverVersion("112.0.5615.28").setup();
+		} else if (browserName.equals("coccoc")) {
+			
 			ChromeOptions options = new ChromeOptions();
-			if(GlobalConstants.OS_NAME.startsWith("Windows")) {
+			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
 				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
-			}else {
+			} else {
 				options.setBinary(".....");
 			}
 			driverBaseTest = new ChromeDriver(options);
-		}else if(browserName.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
+		} else if (browserName.equals("chrome")) {
+			
 			driverBaseTest = new ChromeDriver();
-		}else if(browserName.equals("headlesschrome")) {
-			WebDriverManager.chromedriver().setup();
+		} else if (browserName.equals("headlesschrome")) {
+			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driverBaseTest = new ChromeDriver(options);
-		}else if(browserName.equals("opera")) {
-			WebDriverManager.operadriver().setup();
-			driverBaseTest = WebDriverManager.operadriver().create();
-		}
-		else if(browserName.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
+		
+		} else if (browserName.equals("edge")) {
+			
 			driverBaseTest = new EdgeDriver();
-		}else {
+		} else {
 			throw new RuntimeException("Browser name invalid !");
 		}
-		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIME_OUT, TimeUnit.SECONDS);
+		driverBaseTest.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
 		driverBaseTest.get(appURL);
 		return driverBaseTest;
 	}
-	
-	
+
 	protected int fadeNumber() {
 		Random rand = new Random();
 		return rand.nextInt(99999);
