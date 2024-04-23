@@ -5,14 +5,14 @@
 	<test name="Run On Firefox">
 	<parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="com.jquery.lever_11_Upload_Files"/>
+      <class name="com.jquery.lever_12_Verify_vs_Assert"/>
     </classes>
   	</test> 
   	
   	<test name="Run On Chrome">
 	<parameter name = "browser" value = "chrome"/>
     <classes>
-      <class name="com.jquery.lever_11_Upload_Files"/>
+      <class name="com.jquery.lever_12_Verify_vs_Assert"/>
     </classes>
   	</test> 
   

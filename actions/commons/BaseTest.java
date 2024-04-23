@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 
 
@@ -108,5 +110,47 @@ public class BaseTest {
 	protected int fadeNumber() {
 		Random rand = new Random();
 		return rand.nextInt(99999);
+	}
+	
+	protected boolean verifyTrue(boolean condition) {
+		boolean status = true;
+		try {
+			Assert.assertTrue(condition);
+			log.info("---------------------- Passed -----------------------");
+		} catch (Throwable e) {
+			status = false;
+			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+			Reporter.getCurrentTestResult().setThrowable(e);
+			log.info("---------------------- Failed -----------------------");
+		}
+		return status;
+	}
+
+	protected boolean verifyFalse(boolean condition) {
+		boolean status = true;
+		try {
+			Assert.assertFalse(condition);
+			log.info("---------------------- Passed -----------------------");
+		} catch (Throwable e) {
+			status = false;
+			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+			Reporter.getCurrentTestResult().setThrowable(e);
+			log.info("---------------------- Failed -----------------------");
+		}
+		return status;
+	}
+
+	protected boolean verifyEquals(Object actual, Object expected) {
+		boolean status = true;
+		try {
+			Assert.assertEquals(actual, expected);
+			log.info("---------------------- Passed -----------------------");
+		} catch (Throwable e) {
+			status = false;
+			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+			Reporter.getCurrentTestResult().setThrowable(e);
+			log.info("---------------------- Failed -----------------------");
+		}
+		return status;
 	}
 }
