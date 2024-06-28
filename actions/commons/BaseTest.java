@@ -112,6 +112,10 @@ public class BaseTest {
 		return rand.nextInt(99999);
 	}
 	
+	public WebDriver getDriverInstance() {
+		return this.driverBaseTest;
+	}
+	
 	protected boolean verifyTrue(boolean condition) {
 		boolean status = true;
 		try {

@@ -174,3 +174,191 @@
 [INFO ] [2024-02-29 10:36:05,038] Update Address - Step 15: Save Information Address
 [INFO ] [2024-02-29 10:36:06,721] Update Address - Step 16: Verify Addnew Address Successfully
 [INFO ] [2024-02-29 10:36:06,836] Update Address - Step 17: Click Button Message Successfully
+[INFO ] [2024-06-27 15:09:58,381] Upload - Step 01: Load single file
+[INFO ] [2024-06-27 15:10:01,486] Upload - Step 02: Verify
+[INFO ] [2024-06-27 15:10:01,559] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:01,559] Upload - Step 03: Click To star button
+[INFO ] [2024-06-27 15:10:01,867] Upload - Step 04: Verify upload
+[INFO ] [2024-06-27 15:10:03,565] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:03,565] Upload - Step 05: Verify image displayd
+[INFO ] [2024-06-27 15:10:04,119] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:04,126] Upload - Step 01: Refresh page
+[INFO ] [2024-06-27 15:10:05,045] Upload - Step 02: Load single file
+[INFO ] [2024-06-27 15:10:08,098] Upload - Step 03: Verify File One
+[INFO ] [2024-06-27 15:10:08,142] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:08,142] Upload - Step 04: Verify File Two
+[INFO ] [2024-06-27 15:10:08,185] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:08,185] Upload - Step 05: Verify File Three
+[INFO ] [2024-06-27 15:10:08,227] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:08,227] Upload - Step 06: Verify File Four
+[INFO ] [2024-06-27 15:10:08,263] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:08,263] Upload - Step 07: Verify File Five
+[INFO ] [2024-06-27 15:10:08,301] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:08,302] Upload - Step 08: Verify File Six
+[INFO ] [2024-06-27 15:10:08,349] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:08,349] Upload - Step 09: Click To star button
+[INFO ] [2024-06-27 15:10:09,789] Upload - Step 10: Verify upload File One
+[INFO ] [2024-06-27 15:10:10,117] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:10,117] Upload - Step 11: Verify upload File Two
+[INFO ] [2024-06-27 15:10:11,145] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:11,145] Upload - Step 12: Verify upload File Three
+[INFO ] [2024-06-27 15:10:11,185] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:11,185] Upload - Step 13: Verify upload File Four
+[INFO ] [2024-06-27 15:10:11,224] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:11,224] Upload - Step 14: Verify upload File Five
+[INFO ] [2024-06-27 15:10:11,263] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:11,263] Upload - Step 15: Verify upload File Six
+[INFO ] [2024-06-27 15:10:13,785] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:13,785] Upload - Step 16: Verify image display File One
+[INFO ] [2024-06-27 15:10:13,819] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:13,821] Upload - Step 17: Verify image display File Two
+[INFO ] [2024-06-27 15:10:13,854] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:13,854] Upload - Step 18: Verify image display File Three
+[INFO ] [2024-06-27 15:10:13,884] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:13,884] Upload - Step 19: Verify image display File Four
+[INFO ] [2024-06-27 15:10:13,913] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:13,914] Upload - Step 20: Verify image display File Five
+[INFO ] [2024-06-27 15:10:13,942] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:13,942] Upload - Step 21: Verify image display File Six
+[INFO ] [2024-06-27 15:10:13,968] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:20,259] Upload - Step 01: Load single file
+[INFO ] [2024-06-27 15:10:23,339] Upload - Step 02: Verify
+[INFO ] [2024-06-27 15:10:23,408] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:23,408] Upload - Step 03: Click To star button
+[INFO ] [2024-06-27 15:10:23,510] Upload - Step 04: Verify upload
+[INFO ] [2024-06-27 15:10:25,742] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:25,742] Upload - Step 05: Verify image displayd
+[INFO ] [2024-06-27 15:10:26,361] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:26,365] Upload - Step 01: Refresh page
+[INFO ] [2024-06-27 15:10:26,756] Upload - Step 02: Load single file
+[INFO ] [2024-06-27 15:10:29,812] Upload - Step 03: Verify File One
+[INFO ] [2024-06-27 15:10:29,871] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:29,872] Upload - Step 04: Verify File Two
+[INFO ] [2024-06-27 15:10:29,936] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:29,936] Upload - Step 05: Verify File Three
+[INFO ] [2024-06-27 15:10:29,995] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:29,995] Upload - Step 06: Verify File Four
+[INFO ] [2024-06-27 15:10:30,051] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:30,051] Upload - Step 07: Verify File Five
+[INFO ] [2024-06-27 15:10:30,109] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:30,109] Upload - Step 08: Verify File Six
+[INFO ] [2024-06-27 15:10:30,169] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:30,169] Upload - Step 09: Click To star button
+[INFO ] [2024-06-27 15:10:30,638] Upload - Step 10: Verify upload File One
+[INFO ] [2024-06-27 15:10:32,282] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:32,282] Upload - Step 11: Verify upload File Two
+[INFO ] [2024-06-27 15:10:32,603] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:32,603] Upload - Step 12: Verify upload File Three
+[INFO ] [2024-06-27 15:10:32,658] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:32,658] Upload - Step 13: Verify upload File Four
+[INFO ] [2024-06-27 15:10:32,709] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:32,710] Upload - Step 14: Verify upload File Five
+[INFO ] [2024-06-27 15:10:32,763] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:32,763] Upload - Step 15: Verify upload File Six
+[INFO ] [2024-06-27 15:10:34,156] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:34,156] Upload - Step 16: Verify image display File One
+[INFO ] [2024-06-27 15:10:34,192] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:34,193] Upload - Step 17: Verify image display File Two
+[INFO ] [2024-06-27 15:10:34,239] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:34,239] Upload - Step 18: Verify image display File Three
+[INFO ] [2024-06-27 15:10:34,283] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:34,284] Upload - Step 19: Verify image display File Four
+[INFO ] [2024-06-27 15:10:34,323] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:34,323] Upload - Step 20: Verify image display File Five
+[INFO ] [2024-06-27 15:10:34,361] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:10:34,361] Upload - Step 21: Verify image display File Six
+[INFO ] [2024-06-27 15:10:34,406] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:34,849] Upload - Step 01: Load single file
+[INFO ] [2024-06-27 15:18:37,935] Upload - Step 02: Verify
+[INFO ] [2024-06-27 15:18:37,998] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:37,999] Upload - Step 03: Click To star button
+[INFO ] [2024-06-27 15:18:38,284] Upload - Step 04: Verify upload
+[INFO ] [2024-06-27 15:18:40,077] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:40,078] Upload - Step 05: Verify image displayd
+[INFO ] [2024-06-27 15:18:40,643] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:40,649] Upload - Step 01: Refresh page
+[INFO ] [2024-06-27 15:18:42,356] Upload - Step 02: Load single file
+[INFO ] [2024-06-27 15:18:45,398] Upload - Step 03: Verify File One
+[INFO ] [2024-06-27 15:18:45,461] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:45,462] Upload - Step 04: Verify File Two
+[INFO ] [2024-06-27 15:18:45,509] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:45,510] Upload - Step 05: Verify File Three
+[INFO ] [2024-06-27 15:18:45,554] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:45,554] Upload - Step 06: Verify File Four
+[INFO ] [2024-06-27 15:18:45,593] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:45,593] Upload - Step 07: Verify File Five
+[INFO ] [2024-06-27 15:18:45,633] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:45,633] Upload - Step 08: Verify File Six
+[INFO ] [2024-06-27 15:18:45,680] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:45,680] Upload - Step 09: Click To star button
+[INFO ] [2024-06-27 15:18:47,342] Upload - Step 10: Verify upload File One
+[INFO ] [2024-06-27 15:18:47,867] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:47,867] Upload - Step 11: Verify upload File Two
+[INFO ] [2024-06-27 15:18:48,710] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:48,710] Upload - Step 12: Verify upload File Three
+[INFO ] [2024-06-27 15:18:48,751] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:48,751] Upload - Step 13: Verify upload File Four
+[INFO ] [2024-06-27 15:18:48,794] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:48,794] Upload - Step 14: Verify upload File Five
+[INFO ] [2024-06-27 15:18:48,830] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:48,831] Upload - Step 15: Verify upload File Six
+[INFO ] [2024-06-27 15:18:51,246] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:51,247] Upload - Step 16: Verify image display File One
+[INFO ] [2024-06-27 15:18:51,289] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:51,289] Upload - Step 17: Verify image display File Two
+[INFO ] [2024-06-27 15:18:51,316] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:51,316] Upload - Step 18: Verify image display File Three
+[INFO ] [2024-06-27 15:18:51,346] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:51,346] Upload - Step 19: Verify image display File Four
+[INFO ] [2024-06-27 15:18:51,373] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:51,373] Upload - Step 20: Verify image display File Five
+[INFO ] [2024-06-27 15:18:51,399] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:51,399] Upload - Step 21: Verify image display File Six
+[INFO ] [2024-06-27 15:18:51,428] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:54,689] Upload - Step 01: Load single file
+[INFO ] [2024-06-27 15:18:59,184] Upload - Step 02: Verify
+[INFO ] [2024-06-27 15:18:59,277] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:18:59,278] Upload - Step 03: Click To star button
+[INFO ] [2024-06-27 15:18:59,382] Upload - Step 04: Verify upload
+[INFO ] [2024-06-27 15:19:01,355] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:01,355] Upload - Step 05: Verify image displayd
+[INFO ] [2024-06-27 15:19:01,980] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:01,984] Upload - Step 01: Refresh page
+[INFO ] [2024-06-27 15:19:02,157] Upload - Step 02: Load single file
+[INFO ] [2024-06-27 15:19:05,227] Upload - Step 03: Verify File One
+[INFO ] [2024-06-27 15:19:05,279] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:05,279] Upload - Step 04: Verify File Two
+[INFO ] [2024-06-27 15:19:05,347] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:05,347] Upload - Step 05: Verify File Three
+[INFO ] [2024-06-27 15:19:05,421] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:05,421] Upload - Step 06: Verify File Four
+[INFO ] [2024-06-27 15:19:05,488] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:05,488] Upload - Step 07: Verify File Five
+[INFO ] [2024-06-27 15:19:05,541] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:05,541] Upload - Step 08: Verify File Six
+[INFO ] [2024-06-27 15:19:05,598] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:05,599] Upload - Step 09: Click To star button
+[INFO ] [2024-06-27 15:19:05,992] Upload - Step 10: Verify upload File One
+[INFO ] [2024-06-27 15:19:07,687] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:07,687] Upload - Step 11: Verify upload File Two
+[INFO ] [2024-06-27 15:19:07,829] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:07,829] Upload - Step 12: Verify upload File Three
+[INFO ] [2024-06-27 15:19:07,903] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:07,903] Upload - Step 13: Verify upload File Four
+[INFO ] [2024-06-27 15:19:07,958] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:07,958] Upload - Step 14: Verify upload File Five
+[INFO ] [2024-06-27 15:19:08,013] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:08,013] Upload - Step 15: Verify upload File Six
+[INFO ] [2024-06-27 15:19:09,121] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:09,121] Upload - Step 16: Verify image display File One
+[INFO ] [2024-06-27 15:19:09,166] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:09,167] Upload - Step 17: Verify image display File Two
+[INFO ] [2024-06-27 15:19:09,209] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:09,209] Upload - Step 18: Verify image display File Three
+[INFO ] [2024-06-27 15:19:09,255] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:09,255] Upload - Step 19: Verify image display File Four
+[INFO ] [2024-06-27 15:19:09,300] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:09,300] Upload - Step 20: Verify image display File Five
+[INFO ] [2024-06-27 15:19:09,338] ---------------------- Passed -----------------------
+[INFO ] [2024-06-27 15:19:09,339] Upload - Step 21: Verify image display File Six
+[INFO ] [2024-06-27 15:19:09,380] ---------------------- Passed -----------------------

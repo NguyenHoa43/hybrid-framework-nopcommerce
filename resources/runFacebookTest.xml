@@ -8,6 +8,10 @@
       <class name="com.facebook.register.lever_13_Element_Undisplayed"/>
     </classes>
   	</test> 
-  
-  
+  <test name="Run On Firefox">
+	<parameter name = "browser" value = "firefox"/>
+   <classes>
+      <class name="com.facebook.register.lever_13_Element_Undisplayed"/>
+    </classes>
+  	</test> 
 </suite> 

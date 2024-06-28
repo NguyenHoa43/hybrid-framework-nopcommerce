@@ -10,16 +10,32 @@
 		</layout>
 	</appender>
 
-	<appender name="logfile" class="org.apache.log4j.FileAppender">
+	<!--<appender name="logfile" class="org.apache.log4j.FileAppender">
 		<param name="File" value="./scriptLogs/NopCommerce.txt" />
+		<param name="Append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
+		</layout> 
+	</appender> -->
+		<appender name="logfile" class="org.apache.log4j.FileAppender">
+		<param name="File" value="./scriptLogs/jquery.txt" />
 		<param name="Append" value="false" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
 		</layout>
 	</appender>
 
-	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+	<!-- <appender name="file" class="org.apache.log4j.RollingFileAppender">
 		<param name="file" value="./scriptLogs/NopCommerce.log" />
+		<param name="append" value="true" />
+		<param name="maxFileSize" value="10MB" />
+		<param name="maxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
+		</layout>
+	</appender> -->
+		<appender name="file" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="./scriptLogs/jquery.log" />
 		<param name="append" value="true" />
 		<param name="maxFileSize" value="10MB" />
 		<param name="maxBackupIndex" value="10" />
@@ -36,6 +52,14 @@
 	</appender>
 
 	<category name="com.nopcommerce.user">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+		<appender-ref ref="testng" />
+	</category>
+	
+	<category name="com.jquery">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />

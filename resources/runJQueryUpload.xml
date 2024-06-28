@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite  name="jquery">
 
+	 <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <!-- <listener class-name="reportConfig.ReportNGListener"/>-->
+        <listener class-name="reportConfig.ExtentReportListenerV2"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+ 	</listeners>
 	<parameter name = "url" value = "https://blueimp.github.io/jQuery-File-Upload/"/>
 	<test name="Run On Firefox">
 	<parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="com.jquery.lever_12_Verify_vs_Assert"/>
+      <class name="com.jquery.lever_16_ExtendV2_Screenshot2"/>
     </classes>
   	</test> 
   	
   	<test name="Run On Chrome">
 	<parameter name = "browser" value = "chrome"/>
     <classes>
-      <class name="com.jquery.lever_12_Verify_vs_Assert"/>
+      <class name="com.jquery.lever_16_ExtendV2_Screenshot2"/>
     </classes>
   	</test> 
   
