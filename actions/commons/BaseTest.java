@@ -1,5 +1,6 @@
 package commons;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
 
 
@@ -22,7 +24,11 @@ public class BaseTest {
 
 	private WebDriver driverBaseTest;
 	protected final Log log;
-
+	
+	@BeforeSuite
+	public void initBeforeSuite() {
+		deleteAllureReport();
+	}
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
@@ -157,4 +163,21 @@ public class BaseTest {
 		}
 		return status;
 	}
+	public void deleteAllureReport() {
+		try {
+			String pathFolderDownload = GlobalConstants.PROJECT_PATH +  "/allure-json";
+			File file = new File(pathFolderDownload);
+			File[] listOfFiles = file.listFiles();
+			if (listOfFiles.length != 0) {
+				for (int i = 0; i < listOfFiles.length; i++) {
+					if (listOfFiles[i].isFile() && !listOfFiles[i].getName().equals("environment.properties")) {
+						new File(listOfFiles[i].toString()).delete();
+					}
+				}
+			}
+		} catch (Exception e) {
+			System.out.print(e.getMessage());
+		}
+    }
+	
 }

@@ -49,7 +49,7 @@ public class lever_16_ExtendV4_Screenshot4 extends BaseTest {
 
 	
 	@Test
-	public void Upload_01_One_file_per_Time(Method method) {
+	public void Upload_01_One_file_per_Time() {
 		
 		homepage.uploadMultipleFile(driver, oneFile);
 		
@@ -74,7 +74,7 @@ public class lever_16_ExtendV4_Screenshot4 extends BaseTest {
 		
 	}
 	@Test
-	public void Upload_02_Multiple_File_per_Time(Method method) {
+	public void Upload_02_Multiple_File_per_Time() {
 		
 		homepage.refreshToPage(driver);
 		

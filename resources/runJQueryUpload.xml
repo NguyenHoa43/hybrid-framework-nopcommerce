@@ -7,14 +7,15 @@
        <!--  <listener class-name="reportConfig.ExtentReportListenerV2"/>-->
         <!-- <listener class-name="reportConfig.ExtentTestListenerV3"/>-->
         <!-- <listener class-name="reportConfig.ExtentTestListenerv4"/>-->
-        <listener class-name="reportConfig.ExtentTestListenerV5"/>
+        <!-- <listener class-name="reportConfig.ExtentTestListenerV5"/>-->
+        <listener class-name="reportConfig.AllureTestListener"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
  	</listeners>
 	<parameter name = "url" value = "https://blueimp.github.io/jQuery-File-Upload/"/>
 	<test name="Run On Firefox">
 	<parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="com.jquery.lever_16_ExtendV5_Screenshot5"/>
+      <class name="com.jquery.lever_16_allure_report"/>
     </classes>
   	</test> 
   	

@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.qameta.allure.Step;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
@@ -499,7 +500,7 @@ public class BasePage {
 		explicitWait.until(
 				ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
-	
+	@Step("upload Multiple File")
 	public void uploadMultipleFile(WebDriver driver, String... fileNames) {
 		String filePath = GlobalConstants.UPLOAD_FLIE;
 		String fullFileName = "";
