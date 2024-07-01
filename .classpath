@@ -35,12 +35,10 @@
 	<classpathentry kind="lib" path="libraryReportNG/velocity-1.4.jar"/>
 	<classpathentry kind="lib" path="libraries/selenium-server-4.18.1.jar"/>
 	<classpathentry kind="lib" path="libraries/testng-7.9.0.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/bson-3.0.4.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/extentreports-2.41.2.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/freemarker-2.3.23.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/jsoup-1.8.3.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/mongodb-driver-3.0.4.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/mongodb-driver-core-3.0.4.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="libExtendV5/extentreports-5.0.8.jar"/>
+	<classpathentry kind="lib" path="libExtendV5/freemarker-2.3.30.jar"/>
+	<classpathentry kind="lib" path="libExtendV5/lombok-1.18.12.jar"/>
+	<classpathentry kind="lib" path="libExtendV5/reactive-streams-1.0.3.jar"/>
+	<classpathentry kind="lib" path="libExtendV5/rxjava-3.0.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
