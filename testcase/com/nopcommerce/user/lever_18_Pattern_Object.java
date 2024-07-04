@@ -54,13 +54,19 @@ public class lever_18_Pattern_Object extends BaseTest {
 
 		userRegisterPage = UserHomePage.clickToRegisterLink(driverTestClass);
 		
+		userRegisterPage.clickToRadioButtonByLabel(driverTestClass,"Male");
 		userRegisterPage.inputToTextboxByID(driverTestClass, "FirstName", firstName);
 		userRegisterPage.inputToTextboxByID(driverTestClass, "LastName", lastName);
+		userRegisterPage.selectToDropdownByName(driverTestClass, "DateOfBirthDay", dateOfBirth);
+		userRegisterPage.selectToDropdownByName(driverTestClass, "DateOfBirthMonth", monthOfBirth);
+		userRegisterPage.selectToDropdownByName(driverTestClass, "DateOfBirthYear", yearOfBirth);
 		userRegisterPage.inputToTextboxByID(driverTestClass, "Email", emailAddress);
+		userRegisterPage.clickTocheckboxByLabel(driverTestClass, "Newsletter:");
 		userRegisterPage.inputToTextboxByID(driverTestClass, "Password", passWord);
 		userRegisterPage.inputToTextboxByID(driverTestClass, "ConfirmPassword", passWord);
 		
-		userRegisterPage.clickToRegisterButton();
+
+		userRegisterPage.clickToButtonByText(driverTestClass, "Register");
 		Assert.assertEquals(userRegisterPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		userLoginPage = userRegisterPage.clickToLogoutLink(driverTestClass);
@@ -71,6 +77,9 @@ public class lever_18_Pattern_Object extends BaseTest {
 		Assert.assertTrue(UserHomePage.isMyAccountLinkDisplay());
 
 		UserCustomerInforPage = userLoginPage.clickToAccountLink(driverTestClass);
+		verifyEquals(UserCustomerInforPage.getTextboxValueByID(driverTestClass, "FirstName"), firstName);
+		verifyEquals(UserCustomerInforPage.getTextboxValueByID(driverTestClass, "LastName"), lastName);
+		verifyEquals(UserCustomerInforPage.getTextboxValueByID(driverTestClass, "Email"), emailAddress);
 		Assert.assertTrue(UserCustomerInforPage.isMycustomerInforDisplay());
 	}
 
@@ -79,7 +88,7 @@ public class lever_18_Pattern_Object extends BaseTest {
 
 		UserAddressPage = UserCustomerInforPage.openAddressLink(driverTestClass);
 		Assert.assertTrue(UserAddressPage.isDisplayAddressPage());
-
+		
 		UserMyProductReviewPage = UserAddressPage.openMyProductReviewPage(driverTestClass);
 		Assert.assertTrue(UserMyProductReviewPage.isDisplayProductReviewPage());
 

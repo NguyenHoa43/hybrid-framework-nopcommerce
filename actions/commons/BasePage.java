@@ -602,6 +602,52 @@ public class BasePage {
 		sendkeysToElement(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
 	}
 	
+	/**click to Dynamic Button
+	 * 
+	 * @param driver
+	 * @param buttonText
+	 */
+	public void clickToButtonByText(WebDriver driver, String buttonText) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+		clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+	}
+	
+	/** 
+	 * Select Item in dropdown by name attribute
+	 * @param driver
+	 * @param dropdownAttributeName
+	 * @param item value
+	 */
+	public void selectToDropdownByName(WebDriver driver, String dropdownAttributeName, String itemvalue) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_SELECT_DROPDOWN_BY_NAME, dropdownAttributeName);
+		selectItemInDefaultDropdown(driver, BasePageNopCommerceUI.DYNAMIC_SELECT_DROPDOWN_BY_NAME, itemvalue, dropdownAttributeName);
+		
+	}
+	
+	/** Click to check box by label name
+	 * @param driver
+	 * @param checkboxLabelName
+	 */
+	public void clickToRadioButtonByLabel(WebDriver driver, String checkboxLabelName) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
+		checkToDefaultCheckboxRadio(driver, BasePageNopCommerceUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
+	}
+	public void clickTocheckboxByLabel(WebDriver driver, String checkboxLabelName) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+		checkToDefaultCheckboxRadio(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+	}
+
+	/**
+	 * get value in text by textbox Value
+	 * @param driver
+	 * @param textboxID
+	 * @return
+	 */
+	public String getTextboxValueByID(WebDriver driver, String textboxID) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+		return getElementAttribute(driver,  BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, "value", textboxID);
+	}
+	
 	public UserHomePageObject clickToLogoutLinkUserPage(WebDriver driver) {
 		waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_USER_LINK);
 		clickToElement(driver, BasePageNopCommerceUI.LOGOUT_USER_LINK);
