@@ -13,4 +13,6 @@ public class BasePageNopCommerceUI {
 	public static final String LOGOUT_USER_LINK = "xpath=//a[@class='ico-logout']";
 	public static final String LOGOUT_ADMIN_LINK = "xpath=//a[text()='Logout']";
 	public static final String ICON_OVER_ELEMENT = "xpath=//div[@id='ajaxBusy']";
+	
+	public static final String DYNAMIC_TEXTBOX_BY_ID = "Xpath=//input[@id='%s']";
 }

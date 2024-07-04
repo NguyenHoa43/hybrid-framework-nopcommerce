@@ -354,6 +354,8 @@ public class BasePage {
 		Actions action = new Actions(driver);
 		action.sendKeys(getWebElement(driver, locatorType), key).perform();
 	}
+	
+	
 
 	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues) {
 		Actions action = new Actions(driver);
@@ -588,7 +590,18 @@ public class BasePage {
 			throw new RuntimeException("Invalid page name at My Account area.");
 		}
 	}
-
+	
+	/**enter dynamic Textbox by ID
+	 * @author Duc Hoa
+	 * @param driver
+	 * @param textboxID
+	 * @param value
+	 */
+	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
+		waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+		sendkeysToElement(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
+	}
+	
 	public UserHomePageObject clickToLogoutLinkUserPage(WebDriver driver) {
 		waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_USER_LINK);
 		clickToElement(driver, BasePageNopCommerceUI.LOGOUT_USER_LINK);

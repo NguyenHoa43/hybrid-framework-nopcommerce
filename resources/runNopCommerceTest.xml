@@ -17,7 +17,7 @@
     <classes>
     	<!--Trigger common Register run first-->
       <!-- <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>-->
-      <class name="com.nopcommerce.user.lever_17_Custom_Close_Driver"/>
+      <class name="com.nopcommerce.user.lever_18_Pattern_Object"/>
     </classes>
   	</test> 
   	

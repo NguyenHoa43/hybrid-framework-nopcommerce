@@ -17,5 +17,5 @@ public class RegisterPageUI {
 	public static final String LOGIN_LINK = "xpath=//a[@class='ico-login']";
 	public static final String LOGIN_BUTTON = "xpath=//button[@class='button-1 login-button']";
 	public static final String EXISTING_EMAIL_ERROR_MESSAGE = "xpath=//div[@class='message-error validation-summary-errors']//li";
-
+	
 }
