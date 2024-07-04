@@ -1272,3 +1272,40 @@
 [INFO ] [2024-07-04 10:24:52,417] Driver instance name = firefoxdriver: firefox on windows (93067c54-6c52-4bd9-b6d6-79497bc15748)
 [INFO ] [2024-07-04 14:46:07,673] OS name = windows 10
 [INFO ] [2024-07-04 14:46:07,676] Driver instance name = firefoxdriver: firefox on windows (ce0e1d08-dedd-4325-b1f7-d923f8d9c5c1)
+[INFO ] [2024-07-04 15:07:40,058] OS name = windows 10
+[INFO ] [2024-07-04 15:07:40,063] Driver instance name = firefoxdriver: firefox on windows (f432226c-9ee3-4df5-8c13-f755edc8eb9c)
+[INFO ] [2024-07-04 15:11:31,839] OS name = windows 10
+[INFO ] [2024-07-04 15:11:31,841] Driver instance name = firefoxdriver: firefox on windows (7c8ffe1a-107d-4444-86e8-e0553e702aa7)
+[INFO ] [2024-07-04 15:13:38,021] OS name = windows 10
+[INFO ] [2024-07-04 15:13:38,026] Driver instance name = firefoxdriver: firefox on windows (8d30216b-0e94-4d99-b03c-a973c56fcd0a)
+[INFO ] [2024-07-04 15:43:20,336] OS name = windows 10
+[INFO ] [2024-07-04 15:43:20,338] Driver instance name = firefoxdriver: firefox on windows (07488a59-7b21-495d-ba6c-ca5910d479aa)
+[INFO ] [2024-07-04 15:43:20,362] Failed to decode response from marionette
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [07488a59-7b21-495d-ba6c-ca5910d479aa, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:47762, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10020, moz:profile: C:\Users\CKOAMO~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:47762/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 07488a59-7b21-495d-ba6c-ca5910d479aa
+[INFO ] [2024-07-04 15:44:44,849] OS name = windows 10
+[INFO ] [2024-07-04 15:44:44,852] Driver instance name = firefoxdriver: firefox on windows (535019c6-0bef-49c6-be39-dd641b6f6085)
+[INFO ] [2024-07-04 15:45:45,868] OS name = windows 10
+[INFO ] [2024-07-04 15:45:45,871] Driver instance name = firefoxdriver: firefox on windows (f01d2581-ce5e-4e23-b2ac-ef74551f7d17)
+[INFO ] [2024-07-04 15:48:50,907] OS name = windows 10
+[INFO ] [2024-07-04 15:48:50,910] Driver instance name = firefoxdriver: firefox on windows (0f84be9a-8dcf-4958-bcce-276debd2d3ff)
+[INFO ] [2024-07-04 16:12:26,326] OS name = windows 10
+[INFO ] [2024-07-04 16:12:26,327] Driver instance name = firefoxdriver: firefox on windows (4c51d32f-da06-457c-989e-b21647718974)
+[INFO ] [2024-07-04 17:00:40,518] OS name = windows 10
+[INFO ] [2024-07-04 17:00:40,520] Driver instance name = firefoxdriver: firefox on windows (aac01ac7-8cb2-4b6e-b652-8316d2e7a08a)
+[INFO ] [2024-07-04 17:00:40,524] Tried to run command without establishing a connection
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [aac01ac7-8cb2-4b6e-b652-8316d2e7a08a, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:11820, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1104, moz:profile: C:\Users\CKOAMO~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11820/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: aac01ac7-8cb2-4b6e-b652-8316d2e7a08a
+[INFO ] [2024-07-04 17:02:21,668] ---------------------- Passed -----------------------
+[INFO ] [2024-07-04 17:02:21,705] ---------------------- Passed -----------------------
+[INFO ] [2024-07-04 17:02:21,738] ---------------------- Passed -----------------------
+[INFO ] [2024-07-04 17:02:30,181] OS name = windows 10
+[INFO ] [2024-07-04 17:02:30,181] Driver instance name = firefoxdriver: firefox on windows (cf92e2e9-f616-40cb-beb1-fc4982f142ac)
