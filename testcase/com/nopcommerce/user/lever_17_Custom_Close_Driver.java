@@ -18,7 +18,7 @@ import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPoinPageObject;
 import pageUIs.nopCommerce.user.RewardPoinPageUI;
 
-public class lever_09_Dynamic_Locator extends BaseTest {
+public class lever_17_Custom_Close_Driver extends BaseTest {
 	private WebDriver driverTestClass;
 	private String firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;
 	private String dateOfBirth, monthOfBirth, yearOfBirth, companyName, cityAddress;
@@ -140,8 +140,9 @@ public class lever_09_Dynamic_Locator extends BaseTest {
 
 	}
 
-//	@AfterClass
-//	public void afterClass() {
-//		driverTestClass.quit();
-//	}
+	@AfterClass(alwaysRun = true)
+	public void afterClass() {
+		closeBrowserDriver();
+		
+	}
 }

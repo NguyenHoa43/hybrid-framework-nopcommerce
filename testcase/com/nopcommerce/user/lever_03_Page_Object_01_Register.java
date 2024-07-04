@@ -8,25 +8,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
+import commons.BaseTest;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class lever_03_Page_Object_01_Register {
+public class lever_03_Page_Object_01_Register extends BaseTest {
 	private WebDriver driver;
-	private String projectPath = System.getProperty("user.dir");
 	private String firstName, lastName, passWord, emailAddress, wrongPassword, wrongEmail;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
-
+	
+	
+	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://demo.nopcommerce.com/");
+	public void beforeClass(String browserName) {
+		
+		driver = getBrowserDriver(browserName);
 
 		emailAddress = "afc" + fadeNumber() + "@gmail.com";
 		firstName = "Automation";

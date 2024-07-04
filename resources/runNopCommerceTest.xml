@@ -15,7 +15,9 @@
   	<test name="Run On FIREFOX">
 	<parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="com.nopcommerce.user.lever_09_Dynamic_Locator"/>
+    	<!--Trigger common Register run first-->
+      <!-- <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>-->
+      <class name="com.nopcommerce.user.lever_17_Custom_Close_Driver"/>
     </classes>
   	</test> 
   	
