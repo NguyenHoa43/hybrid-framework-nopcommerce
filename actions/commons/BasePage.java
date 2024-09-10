@@ -355,8 +355,6 @@ public class BasePage {
 		action.sendKeys(getWebElement(driver, locatorType), key).perform();
 	}
 	
-	
-
 	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues) {
 		Actions action = new Actions(driver);
 		action.sendKeys(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)), key).perform();
