@@ -122,8 +122,9 @@ public class lever_10_DataTable_DataGrid extends BaseTest {
 		homePage.clickToIconByRowNumber("3", "Move Up");
 		homePage.sleep(2);
 	}
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void afterClass() {
-		//driver.quit();
+		closeBrowserDriver();
+		
 	}
 }

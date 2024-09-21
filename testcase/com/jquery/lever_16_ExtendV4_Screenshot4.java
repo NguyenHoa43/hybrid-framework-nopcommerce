@@ -122,7 +122,7 @@ public class lever_16_ExtendV4_Screenshot4 extends BaseTest {
 		
 		verifyTrue(homepage.isFileImageUpLoadedByName(seventfile));
 		
-		verifyTrue(homepage.isFileImageUpLoadedByName(seventfile));
+		verifyTrue(homepage.isFileImageUpLoadedByName(sixFile));
 			
 	}
 	
