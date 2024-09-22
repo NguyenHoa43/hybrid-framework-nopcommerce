@@ -2,7 +2,7 @@
 <suite  name="jquery">
 
 	<parameter name = "url" value = "https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"/>
-	<test name="Run On Firefox">
+	<test name="Run On FIREFOX">
 	<parameter name = "browser" value = "firefox"/>
     <classes>
       <class name="com.jquery.lever_10_DataTable_DataGrid"/>

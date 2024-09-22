@@ -2,6 +2,8 @@ package commons;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +18,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -82,13 +85,26 @@ public class BaseTest {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		switch (browserList) {
 		case CHROME:
-			driverBaseTest = new ChromeDriver();
+			
+			File chromeFile = new File(GlobalConstants.BROWSER_EXTENSION + "GPPONGMHJKPFNBHAGPMJFKANNFBLLAMG_6_10_74_0 (1).crx");
+			ChromeOptions chromeOption = new ChromeOptions();
+			chromeOption.addExtensions(chromeFile);
+			driverBaseTest = new ChromeDriver(chromeOption);
 			break;
 		case FIREFOX:
 			driverBaseTest = new FirefoxDriver();
+			Path xpiPath = Paths.get(GlobalConstants.BROWSER_EXTENSION + "wappalyzer.xpi");
+			FirefoxDriver ffDriver = (FirefoxDriver) driverBaseTest;
+			ffDriver.installExtension(xpiPath);
+			driverBaseTest = ffDriver;
+			
 			break;
 		case EDGE:
-			driverBaseTest = new EdgeDriver();
+			
+			File edgeFile = new File(GlobalConstants.BROWSER_EXTENSION + "GPPONGMHJKPFNBHAGPMJFKANNFBLLAMG_6_10_74_0 (1).crx");
+			EdgeOptions egdeOption = new EdgeOptions();
+			egdeOption.addExtensions(edgeFile);
+			driverBaseTest = new EdgeDriver(egdeOption);
 			break;
 		case CHROME_HEADLESS:
 			ChromeOptions chOption = new ChromeOptions();
